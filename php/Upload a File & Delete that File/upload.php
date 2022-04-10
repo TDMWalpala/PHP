@@ -25,7 +25,7 @@
                     $fileNewName = uniqid('',true).'.'.$fileActualExt;
                     $fileDestination = 'Local/'.$fileNewName;
                     move_uploaded_file($fileTempName,$fileDestination);
-                    header('location: index.php?upload=success');
+                    header('Location: delete.php?upload=success&name='.$fileNewName.'');
 
                 }else{
                     echo'File is too big!.';
