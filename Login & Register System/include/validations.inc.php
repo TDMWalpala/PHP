@@ -8,16 +8,26 @@
         }
         return $value;
     }
-
-    function inputsEmptyLogin($email, $pass){
+    
+    function inputsEmptyLogin($email,$pass){
         $value;
-        if(empty($email) || empty($pass)){
+        if(empty($email) ||  empty($pass)){
             $value = true;
         }else{
             $value = false;
         }
         return $value;
     }
+
+    // function inputsEmptyLogin($email, $pass){
+        // $value;
+        // if(empty($email) || empty($pass)){
+            // $value = true;
+        // }else{
+            // $value = false;
+        // }
+        // return $value;
+    // }
 
     function nameInvalid($fname, $lname){
         $value;
@@ -34,9 +44,11 @@
     }
 
     function emailInvalid($email){
+        
         $value;
         if(!preg_match("/^[a-zA-Z\d\._-]+@[a-zA-Z\d_-]+\.[a-zA-Z\d\.]{2,}$/", $email)){
             $value = true; 
+            // echo("exx");
         }
         else{
             $value = false;
